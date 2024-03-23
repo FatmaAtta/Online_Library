@@ -1,0 +1,28 @@
+{% extends 'library/base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Library - Books{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+    {% block content %}
+        <body>        
+            <h1>Hello, I am the Books Page2</h1>
+            <div class="book">
+                <a href="{%url 'details'%}">
+                <img src="{% static 'img/download.jpg' %}" alt="Looking For Alaska" height="100" width="100"></a>
+                <div class="book_title">Looking For Alaska</div>
+                <div class="available">Available</div>
+                <div class="unavailable">Unavailable</div>
+                <div class="borrowed">Borrowed</div>
+            </div>
+        </body>    
+
+    {% endblock %}
+
+
+</html>
